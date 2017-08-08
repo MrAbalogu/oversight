@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './components/App';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import App from './components/app';
+import Admin from './components/admin';
 
 ReactDOM.render(
-  <BrowserRouter basename="/oversight">
-    <App />
-  </BrowserRouter>,
+  <Router basename="/oversight">
+    <Switch>
+      <Route exact path="/" component={App} />
+      <Route path="/admin" component={Admin} />
+    </Switch>
+  </Router>,
   document.getElementById('root'),
 );

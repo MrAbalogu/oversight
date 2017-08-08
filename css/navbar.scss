@@ -1,0 +1,18 @@
+.nav-icon {
+  padding: 0 12px;
+  color: white !important;
+  &:hover {
+    -webkit-transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.variable-width .slick-slide p, h3 {
+  background: green !important;
+  color: white !important;
+}
