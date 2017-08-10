@@ -101,7 +101,7 @@ class ProfileCard extends React.Component{
             <p className='card-name'>{this.props.name}</p>
             <p className='card-post'>{this.props.post}</p>
             <p className='card-state'>{this.props.state}</p>
-            <p className='card-dob'>Age: {this.props.dob} <span>50%</span></p>
+            <p className='card-dob'>Age: {this.props.dob} <span>{this.props.rating}</span></p>
           </div>
         </div>
         <Dialog

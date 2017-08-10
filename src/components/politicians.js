@@ -25,12 +25,14 @@ class Politicians extends React.Component {
     const politicians = this.props.politicians.map((politician, key) => {
       return (
         <div key={politician.id}>
-          <ProfileCard name={politician.name}
-                       avatar={politician.avatar}
-                       post={politician.current_post}
-                       state={politician.state}
-                       dob={politician.dob}
-                       party={politician.current_party}
+          <ProfileCard
+            name={politician.name}
+            avatar={politician.avatar}
+            post={politician.current_post}
+            state={politician.state}
+            dob={politician.dob}
+            party={politician.current_party}
+            rating={politician.rating}
           />
         </div>
       )

@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
     })
     return (
       <div className='col-md-6 col-md-offset-3 search-container'>
-        <img src='../img/logo.png' className='landing-logo' />
+        <img src="https://i.imgur.com/UpkQmUz.png" className='landing-logo' />
         <p>Know Your Leaders</p>
         <AutoComplete
           style={searchStyle}

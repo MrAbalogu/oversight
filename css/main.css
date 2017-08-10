@@ -5453,5 +5453,27 @@ h3 {
     opacity: .8;
     transform: scale(0.95);
     transition: all .3s ease; } }
+.sidebar {
+  padding: 20px;
+  background: green; }
+
+.sidebar-cont {
+  color: white;
+  list-style-type: none; }
+  .sidebar-cont li {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold; }
+    .sidebar-cont li:hover {
+      cursor: pointer;
+      color: black;
+      font-size: 17px; }
+
+.admin-table {
+  padding: 20px;
+  padding-left: 40px; }
+
+.admin-cont {
+  background: white; }
 
 /*# sourceMappingURL=main.css.map */
