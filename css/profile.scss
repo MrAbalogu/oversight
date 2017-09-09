@@ -65,12 +65,16 @@ p.card-dob {
     color: green;
   }
 }
-.logo-thumb {
-  width: 60px;
-  height: 40px;
+p.my-rating {
+  font-size: 13px;
+  font-weight: bold;
 }
-.landing-logo {
-  height: 80px;
+p.rate-tab {
+  // font-size: 1px;
+  font-weight: bold;
+}
+.rate-input {
+  width: 40px;
 }
 .image-cont {
   padding-top: 10px;

@@ -1,45 +1,52 @@
 import React from 'react';
-import SideBar from './admin/sidebar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PoliticiansTable from './admin/politicians-table';
+import UsersTable from './admin/users-table';
 
-const REQUEST_URL = 'https://6282da3b.ngrok.io/politicians';
+const REQUEST_URL = 'https://67443114.ngrok.io/politicians';
 
 class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
-      input: '',
+      show: true,
     };
   }
 
-  componentDidMount() {
-    return fetch(REQUEST_URL)
-      .then(response => response.json())
-        .then((json) => {
-          this.setState({
-            data: json,
-            showDialog: false,
-          });
-        });
+  showPoliticians() {
+    this.setState({
+      show: true,
+    })
   }
 
-  handleUserInput(s) {
+  showUsers() {
     this.setState({
-      input: s,
-    });
+      show: false,
+    })
   }
 
   render() {
-    const filtered = this.state.data.filter((p) => {
-      return (p.name.toLowerCase().indexOf(this.state.input) > -1);
-    });
+    let tableDisplay = null;
+    if (this.state.show === true) {
+      tableDisplay = <PoliticiansTable />;
+    } else {
+      tableDisplay = <UsersTable />;
+    }
 
     return (
-      <div className="admin-cont col-md-12">
-        <SideBar />
-        <PoliticiansTable politicians={filtered} />
-      </div>
+      <MuiThemeProvider>
+        <div className="admin-cont col-md-12">
+          <div className="sidebar row col-md-3">
+            <ul className="sidebar-cont">
+              <li onClick={this.showPoliticians.bind(this)} >Politicians</li>
+              <li onClick={this.showUsers.bind(this)} >Users</li>
+            </ul>
+          </div>
+
+          {tableDisplay}
+
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

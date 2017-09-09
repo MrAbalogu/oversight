@@ -32,12 +32,12 @@ class Register extends React.Component{
         label="Submit"
         primary={true}
         keyboardFocused={true}
-        onTouchTap={this.handleClose.bind(this)}
+        onTouchTap={this.props.onUserSubmit.bind(this)}
       />,
     ];
 
     return (
-      <div className='float-left'>
+      <div className="float-left">
         <FontIcon className="material-icons nav-icon" onClick={this.handleOpen.bind(this)}>face</FontIcon>
         <Dialog
           title='Register'

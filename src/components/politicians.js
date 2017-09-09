@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ProfileCard from './profilecard'
+import ProfileCard from './profilecard';
 
 const settings = {
   className: 'center',
@@ -28,11 +28,11 @@ class Politicians extends React.Component {
           <ProfileCard
             name={politician.name}
             avatar={politician.avatar}
-            post={politician.current_post}
+            post={politician.portfolio}
             state={politician.state}
             dob={politician.dob}
-            party={politician.current_party}
-            rating={politician.rating}
+            party={politician.party}
+            loggedin={this.props.loggedin}
           />
         </div>
       )

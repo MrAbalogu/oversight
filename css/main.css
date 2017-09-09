@@ -10,6 +10,16 @@
   color: white;
   margin-bottom: 0; }
 
+.logo-thumb {
+  width: 60px;
+  height: 40px; }
+
+.landing-logo {
+  height: 150px; }
+
+.search-input {
+  background-color: white; }
+
 .dialogTab {
   display: inline;
   list-style-type: none; }
@@ -76,12 +86,15 @@ p.card-dob {
     float: right;
     color: green; }
 
-.logo-thumb {
-  width: 60px;
-  height: 40px; }
+p.my-rating {
+  font-size: 13px;
+  font-weight: bold; }
 
-.landing-logo {
-  height: 80px; }
+p.rate-tab {
+  font-weight: bold; }
+
+.rate-input {
+  width: 40px; }
 
 .image-cont {
   padding-top: 10px;
@@ -5453,9 +5466,16 @@ h3 {
     opacity: .8;
     transform: scale(0.95);
     transition: all .3s ease; } }
+html, body {
+  height: 100%; }
+
+#root {
+  height: 100%; }
+
 .sidebar {
   padding: 20px;
-  background: green; }
+  background: #417505;
+  height: 100%; }
 
 .sidebar-cont {
   color: white;
@@ -5474,6 +5494,11 @@ h3 {
   padding-left: 40px; }
 
 .admin-cont {
-  background: white; }
+  background: white;
+  height: 100%; }
+
+.all-politicians-card {
+  width: 250px;
+  float: left; }
 
 /*# sourceMappingURL=main.css.map */

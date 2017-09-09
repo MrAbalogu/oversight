@@ -34,9 +34,9 @@ class SearchBar extends React.Component {
     })
     return (
       <div className='col-md-6 col-md-offset-3 search-container'>
-        <img src="https://i.imgur.com/UpkQmUz.png" className='landing-logo' />
-        <p>Know Your Leaders</p>
+        <img src="http://i.imgur.com/LHkPdtS.png" className="landing-logo" />
         <AutoComplete
+          className="search-input"
           style={searchStyle}
           floatingLabelText="Search Politician"
           filter={AutoComplete.fuzzyFilter}

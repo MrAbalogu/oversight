@@ -2,10 +2,11 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import TopNav from './topnav';
+import Profile from './profile';
 import SearchBar from './searchbar';
 import Politicians from './politicians';
 
-const REQUEST_URL = 'https://6282da3b.ngrok.io/politicians';
+const REQUEST_URL = 'https://67443114.ngrok.io/politicians';
 
 class LandingPage extends React.Component {
   constructor(props){
@@ -13,6 +14,7 @@ class LandingPage extends React.Component {
     this.state = {
       data: [],
       input: '',
+      loggedin: false,
     }
   };
 
@@ -28,24 +30,45 @@ class LandingPage extends React.Component {
           .catch((error) => {
             console.error(error);
           });
-  };
+  }
 
-  handleUserInput(s){
+  handleUserInput(s) {
     this.setState({
       input: s,
     })
   }
 
+  login() {
+    console.log('just changed loggedin state');
+    this.setState({
+      loggedin: true,
+    });
+  }
+
   render() {
     const filtered = this.state.data.filter((p) => {
-      return (p.name.toLowerCase().indexOf(this.state.input)>-1);
-    })
+      return (p.name.toLowerCase().indexOf(this.state.input) > -1);
+    });
+
+// login front end rendering of TopNav
+    let topnav = null;
+    if (this.state.loggedin === false) {
+      topnav = <TopNav onUserSubmit={this.login.bind(this)} />;
+    } else {
+      topnav = <Profile />;
+    }
+// ...........
+
     return (
       <div className='col-md-12 page-container'>
-        <TopNav />
-        <SearchBar data={filtered} value={this.state.searchText} onUserInput={this.handleUserInput.bind(this)}
-                   onClick={this.someEvent} />
-        <Politicians politicians={filtered} />
+        {topnav}
+        <SearchBar
+          data={filtered}
+          value={this.state.searchText}
+          onUserInput={this.handleUserInput.bind(this)}
+          onClick={this.someEvent}
+        />
+        <Politicians politicians={filtered} loggedin={this.state.loggedin} />
       </div>
     );
   }

@@ -1,6 +1,13 @@
+html, body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
 .sidebar {
   padding: 20px;
-  background: green;
+  background: #417505;
+  height: 100%;
 }
 .sidebar-cont {
   color: white;
@@ -22,4 +29,5 @@
 }
 .admin-cont {
   background: white;
+  height: 100%;
 }

@@ -32,7 +32,7 @@ class SignIn extends React.Component{
         label="Submit"
         primary={true}
         keyboardFocused={true}
-        onTouchTap={this.handleClose.bind(this)}
+        onTouchTap={this.props.onUserSubmit.bind(this)}
       />,
     ];
 
