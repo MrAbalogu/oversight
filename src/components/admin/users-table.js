@@ -1,6 +1,6 @@
 import React from 'react';
 
-const REQUEST_URL = 'https://281cadcb.ngrok.io/users';
+const REQUEST_URL = 'https://6bf8cb94.ngrok.io/users';
 
 class UsersTable extends React.Component {
   constructor(props) {

@@ -6,7 +6,7 @@ import Profile from './profile';
 import SearchBar from './searchbar';
 import Politicians from './politicians';
 
-const REQUEST_URL = 'https://281cadcb.ngrok.io/politicians';
+const REQUEST_URL = 'https://6bf8cb94.ngrok.io/politicians';
 
 class LandingPage extends React.Component {
   constructor(props){

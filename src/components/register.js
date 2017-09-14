@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-const url = 'https://281cadcb.ngrok.io/users';
+const url = 'https://6bf8cb94.ngrok.io/users';
 
 class Register extends React.Component{
   constructor(props){
