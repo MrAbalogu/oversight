@@ -3,7 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
-const REQUEST_URL = 'http://localhost:3000/politicians';
+const REQUEST_URL = 'https://281cadcb.ngrok.io/politicians';
 
 const styles = {
   radioButton: {
