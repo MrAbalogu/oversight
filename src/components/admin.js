@@ -3,8 +3,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PoliticiansTable from './admin/politicians-table';
 import UsersTable from './admin/users-table';
 
-const REQUEST_URL = 'https://67443114.ngrok.io/politicians';
-
 class Admin extends React.Component {
   constructor(props) {
     super(props);

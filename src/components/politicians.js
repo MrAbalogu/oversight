@@ -8,6 +8,7 @@ const settings = {
   centerPadding: '60px',
   slidesToShow: 5,
   swipeToSlide: true,
+  responsive: [{ breakpoint: 768, settings: { slidesToShow: 1 } }, { breakpoint: 1024, settings: { slidesToShow: 5 } }],
   afterChange: function (index) {
     console.log(`Slider Changed to: ${index + 1}, background: #222; color: #bada55`);
   }
